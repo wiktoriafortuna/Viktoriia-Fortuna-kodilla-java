@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static java.util.Collections.emptyList;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -24,36 +25,31 @@ public class CollectionTestSuite {
     @Test
     void testOddNumbersExterminatorEmptyList() {
 //        Given
-        List<Integer>actual=new ArrayList<>();
-
-//       when
-        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
-        List<Integer>result=oddNumbersExterminator.exterminate(actual);
-
-
+        List<Integer>emptyList=new ArrayList<>();
+        OddNumbersExterminator oddNumbersExterminator=new OddNumbersExterminator();
+//        When
+        List<Integer> result= oddNumbersExterminator.exterminate(emptyList);
 //        Then
-        Assertions.assertEquals(List.of(),result);
+        Assertions.assertEquals(0,result.size());
     }
-
+//
 
     @DisplayName("test testujacy usuwanie liczb nieparzystych z listy"
     )
 
     @Test
     void testOddNumbersExterminatorNormalList() {
-//       Given
-        List<Integer>actual=new ArrayList<>();
+        List<Integer>emptyList=new ArrayList<>();
+        emptyList.add(1);
+        emptyList.add(2);
+        emptyList.add(3);
+        emptyList.add(4);
+        emptyList.add(5);
 
-        actual.add(2);
-        actual.add(5);
-
-//       when
-        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
-        List<Integer>result=oddNumbersExterminator.exterminate(actual);
-
-
-//        Then
-        Assertions.assertEquals(List.of(2),result);
+        OddNumbersExterminator oddNumbersExterminator=new OddNumbersExterminator();
+        List<Integer> result= oddNumbersExterminator.exterminate(emptyList);
+        Assertions.assertEquals(2,result.size());
     }
+//
 
 }

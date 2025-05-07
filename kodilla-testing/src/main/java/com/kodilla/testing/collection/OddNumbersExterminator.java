@@ -5,14 +5,15 @@ import java.util.List;
 
 public class OddNumbersExterminator {
     public List<Integer> exterminate(List<Integer> numbers) {
-        List<Integer> result = new ArrayList<>();
-        for (Integer number : numbers) {
+        List<Integer>parzyste=new ArrayList<>();
 
-            if (number % 2 == 0) {
-                result.add(number);
+        for(Integer liczba:numbers){
+            if(liczba%2==0){
+                parzyste.add(liczba);
             }
+
         }
-        return result;
+        return parzyste;
 
     }
 }
