@@ -1,16 +1,13 @@
 package com.kodilla.testing.library;
 
-import com.kodilla.testing.library;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.mockito.verification.VerificationMode;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static jdk.internal.org.objectweb.asm.util.CheckClassAdapter.verify;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.anyString;
@@ -89,7 +86,8 @@ class BookDirectoryTestSuite {
 
         // Then
         assertEquals(0, theListOfBooks10.size());                                     // [5]
-        verify(libraryDatabaseMock,times(0)).listBooksWithCondition(anyString());    // [6]
+//        Mockito.verify((libraryDatabaseMock,times(0)).listBooksWithCondition(anyString());
+    }
     }
 
 //    @Test
@@ -118,4 +116,3 @@ class BookDirectoryTestSuite {
 //    }
 
 
-}

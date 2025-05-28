@@ -1,12 +1,10 @@
 package com.kodilla.testing.library;
 
-import com.kodilla.testing.library;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class BookLibrary {
-    private final library.LibraryUser libraryUser;
+    private LibraryUser libraryUser;
     LibraryDatabase libraryDatabase;
 
     public BookLibrary(LibraryDatabase libraryDatabase) {
