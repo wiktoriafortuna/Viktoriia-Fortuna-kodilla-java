@@ -86,7 +86,7 @@ class BookDirectoryTestSuite {
 
         // Then
         assertEquals(0, theListOfBooks10.size());                                     // [5]
-//        Mockito.verify((libraryDatabaseMock,times(0)).listBooksWithCondition(anyString());
+       Mockito.verify(libraryDatabaseMock,Mockito.times(0)).listBooksWithCondition(anyString());
     }
     }
 
