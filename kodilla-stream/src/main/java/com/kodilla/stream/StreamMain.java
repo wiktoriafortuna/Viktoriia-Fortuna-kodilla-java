@@ -36,7 +36,8 @@ public class StreamMain {
 //        poemBeautifier.beautify("kwiaty",ant -> ant.toUpperCase());
 //    }
 
-//    wymyslony przezemnie upiekszacz
+//   wymyslony przezemnie upiekszacz
+//    dodalam _
     public static void main(String[] args) {
         PoemBeautifier poemBeautifier = new PoemBeautifier();
         poemBeautifier.beautify("kwiaty biale",ant -> ant.replace(" ", "_"));
