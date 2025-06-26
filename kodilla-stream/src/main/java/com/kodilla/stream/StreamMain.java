@@ -39,11 +39,13 @@ public class StreamMain {
 
 //   wymyslony przezemnie upiekszacz
 //    dodalam _
-//    public static void main(String[] args) {
-//        PoemBeautifier poemBeautifier = new PoemBeautifier();
-//        poemBeautifier.beautify("kwiaty biale",ant -> ant.replace(" ", "_"));
-//    }
-//}
+  public static void main(String[] args) {
+       PoemBeautifier poemBeautifier = new PoemBeautifier();
+      poemBeautifier.beautify("kwiaty biale",ant -> ant.replace(" ", "_"));
+      poemBeautifier.beautify("lato", ant -> "***" + ant + "***");
+      poemBeautifier.beautify("kwiaty",ant -> ant.toUpperCase());
+  }
+}
 
-System.out.println("Using Stream to generate even numbers from 1 to 20");
-NumbersGenerator.generateEven(20);
+//System.out.println("Using Stream to generate even numbers from 1 to 20");
+//NumbersGenerator.generateEven(20);
