@@ -27,6 +27,7 @@
 package com.kodilla.stream;
 
 import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.iterate.NumbersGenerator;
 
 import java.util.Locale;
 
@@ -38,8 +39,11 @@ public class StreamMain {
 
 //   wymyslony przezemnie upiekszacz
 //    dodalam _
-    public static void main(String[] args) {
-        PoemBeautifier poemBeautifier = new PoemBeautifier();
-        poemBeautifier.beautify("kwiaty biale",ant -> ant.replace(" ", "_"));
-    }
-}
+//    public static void main(String[] args) {
+//        PoemBeautifier poemBeautifier = new PoemBeautifier();
+//        poemBeautifier.beautify("kwiaty biale",ant -> ant.replace(" ", "_"));
+//    }
+//}
+
+System.out.println("Using Stream to generate even numbers from 1 to 20");
+NumbersGenerator.generateEven(20);
